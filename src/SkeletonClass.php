@@ -1,7 +1,12 @@
 <?php
 
-namespace renepardon\gelf-support;
+namespace renepardon\GelfSupport;
 
+/**
+ * Class SkeletonClass
+ *
+ * @package renepardon\GelfSupport
+ */
 class SkeletonClass
 {
     /**

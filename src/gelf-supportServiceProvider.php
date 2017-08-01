@@ -1,10 +1,15 @@
 <?php
 
-namespace renepardon\gelf-support;
+namespace renepardon\GelfSupport;
 
 use Illuminate\Support\ServiceProvider;
 
-class gelf-supportServiceProvider extends ServiceProvider
+/**
+ * Class GelfSupportServiceProvider
+ *
+ * @package renepardon\GelfSupport
+ */
+class GelfSupportServiceProvider extends ServiceProvider
 {
     /**
      * Perform post-registration booting of services.
