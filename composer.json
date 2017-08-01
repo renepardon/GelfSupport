@@ -1,7 +1,7 @@
 {
     "name": "renepardon/gelf-support",
     "type": "library",
-    "description": ":package_description",
+    "description": "A composer compliant package to support GELF logging within laravel/symfony projects",
     "keywords": [
         "renepardon",
         "gelf-support"
@@ -10,9 +10,9 @@
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": ":author_email",
-            "homepage": ":author_website",
+            "name": "Christoph, René Pardon",
+            "email": "rene.pardon@boonweb.de",
+            "homepage": "http://www.renepardon.de",
             "role": "Developer"
         }
     ],
