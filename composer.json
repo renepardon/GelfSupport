@@ -1,5 +1,5 @@
 {
-    "name": "renepardon/GelfSupport",
+    "name": "renepardon/gelf-support",
     "type": "library",
     "description": "A composer compliant package to support GELF logging within laravel/symfony projects",
     "keywords": [
