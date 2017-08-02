@@ -54,7 +54,7 @@ class Decorator implements ExceptionHandler
     public function report(Exception $e)
     {
         // Do the Graylog logging stuff if enabled
-        if ($this->config->get('gelfsupport.enabled')) {
+        if (true == $this->config->get('gelfsupport.enabled')) {
             $exceptionMessage = empty($e->getMessage()) ? 'no exception message set' : $e->getMessage();
 
             /** @var Graylog $graylog */

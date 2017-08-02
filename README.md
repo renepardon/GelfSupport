@@ -23,7 +23,7 @@ vendor/     Contains dependencies
 Via Composer
 
 ``` bash
-$ composer require renepardon/GelfSupport
+$ composer require renepardon/gelf-support:"dev-master"
 ```
 
 ### laravel
@@ -77,17 +77,17 @@ If you discover any security related issues, please email rene.pardon@boonweb.de
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
 
-[ico-version]: https://img.shields.io/packagist/v/renepardon/GelfSupport.svg?style=flat-square
+[ico-version]: https://img.shields.io/packagist/v/renepardon/gelf-support.svg?style=flat-square
 [ico-license]: https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square
-[ico-travis]: https://img.shields.io/travis/renepardon/GelfSupport/master.svg?style=flat-square
-[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/renepardon/GelfSupport.svg?style=flat-square
-[ico-code-quality]: https://img.shields.io/scrutinizer/g/renepardon/GelfSupport.svg?style=flat-square
-[ico-downloads]: https://img.shields.io/packagist/dt/renepardon/GelfSupport.svg?style=flat-square
+[ico-travis]: https://img.shields.io/travis/renepardon/gelf-support/master.svg?style=flat-square
+[ico-scrutinizer]: https://img.shields.io/scrutinizer/coverage/g/renepardon/gelf-support.svg?style=flat-square
+[ico-code-quality]: https://img.shields.io/scrutinizer/g/renepardon/gelf-support.svg?style=flat-square
+[ico-downloads]: https://img.shields.io/packagist/dt/renepardon/gelf-support.svg?style=flat-square
 
-[link-packagist]: https://packagist.org/packages/renepardon/GelfSupport
-[link-travis]: https://travis-ci.org/renepardon/GelfSupport
-[link-scrutinizer]: https://scrutinizer-ci.com/g/renepardon/GelfSupport/code-structure
-[link-code-quality]: https://scrutinizer-ci.com/g/renepardon/GelfSupport
-[link-downloads]: https://packagist.org/packages/renepardon/GelfSupport
+[link-packagist]: https://packagist.org/packages/renepardon/gelf-support
+[link-travis]: https://travis-ci.org/renepardon/gelf-support
+[link-scrutinizer]: https://scrutinizer-ci.com/g/renepardon/gelf-support/code-structure
+[link-code-quality]: https://scrutinizer-ci.com/g/renepardon/gelf-support
+[link-downloads]: https://packagist.org/packages/renepardon/gelf-support
 [link-author]: https://github.com/renepardon
 [link-contributors]: ../../contributors
