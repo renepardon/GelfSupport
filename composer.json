@@ -1,12 +1,14 @@
 {
-    "name": "renepardon/gelf-support",
+    "name": "renepardon/GelfSupport",
     "type": "library",
     "description": "A composer compliant package to support GELF logging within laravel/symfony projects",
     "keywords": [
         "renepardon",
-        "gelf-support"
+        "gelfsupport",
+        "laravel",
+        "symfony"
     ],
-    "homepage": "https://github.com/renepardon/gelf-support",
+    "homepage": "https://github.com/renepardon/GelfSupport",
     "license": "MIT",
     "authors": [
         {
@@ -17,21 +19,23 @@
         }
     ],
     "require": {
-        "illuminate/support": "~5.1",
-        "php" : "~5.6|~7.0"
+        "php": "~7.0",
+        "graylog2/gelf-php": "^1.5",
+        "illuminate/contracts": "^5.4",
+        "illuminate/support": "~5.1"
     },
     "require-dev": {
-        "phpunit/phpunit" : "~4.0||~5.0||~6.0",
+        "phpunit/phpunit" : "~5.0||~6.0",
         "squizlabs/php_codesniffer": "^2.3"
     },
     "autoload": {
         "psr-4": {
-            "renepardon\\gelf-support\\": "src"
+            "RenePardon\\GelfSupport\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "renepardon\\gelf-support\\": "tests"
+            "RenePardon\\GelfSupport\\": "tests"
         }
     },
     "scripts": {

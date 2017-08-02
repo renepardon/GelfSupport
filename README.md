@@ -7,23 +7,16 @@
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]][link-downloads]
 
-**Note:** Replace ```Christoph, René Pardon``` ```renepardon``` ```http://www.renepardon.de``` ```rene.pardon@boonweb.de``` ```renepardon``` ```GelfSupport``` ```A composer compliant package to support GELF logging within laravel/symfony projects``` with their correct values in [README.md](README.md), [CHANGELOG.md](CHANGELOG.md), [CONTRIBUTING.md](CONTRIBUTING.md), [LICENSE.md](LICENSE.md) and [composer.json](composer.json) files, then delete this line. You can run `$ php prefill.php` in the command line to make all replacements at once. Delete the file prefill.php as well.
-
-This is where your description should go. Try and limit it to a paragraph or two, and maybe throw in a mention of what
-PSRs you support to avoid any confusion with users and contributors.
+A composer compliant package to support GELF logging within laravel/symfony projects
 
 ## Structure
 
-If any of the following are applicable to your project, then the directory structure should follow industry best practises by being named the following.
-
 ```
-bin/        
-config/
-src/
-tests/
-vendor/
+config/     Contains configuration files
+src/        Contains the package source code
+tests/      Contains PHPUnit tests
+vendor/     Contains dependencies
 ```
-
 
 ## Install
 
@@ -33,12 +26,31 @@ Via Composer
 $ composer require renepardon/GelfSupport
 ```
 
-## Usage
+### laravel
+
+Add the following line to the **config/app.php** file within **providers** section:
 
 ``` php
-$skeleton = new renepardon\GelfSupport();
-echo $skeleton->echoPhrase('Hello, League!');
+\RenePardon\GelfSupport\GelfSupportServiceProvider::class,
 ```
+
+Adjust the **.env** file to contain required constants which points to your Graylog2 server
+
+```
+GRAYLOG_ENABLED=true
+GRAYLOG_HOST=localhost
+GRAYLOG_PORT=12201
+```
+
+You can of course adjust the configuration file directly so publish it to your appication with the following command:
+
+``` bash
+php artisan vendor:publish --provider="RenePardon\GelfSupport\GelfSupportServiceProvider" --tag="config"
+```
+
+### symfony
+
+TO BE DONE - WE HAVE TO REGISTER THE BUNDLE WITHIN AppKernel.php
 
 ## Change log
 
@@ -46,9 +58,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed re
 
 ## Testing
 
-``` bash
-$ composer test
-```
+TO BE DONE - FEEL FREE TO WRITE SOME TESTS
 
 ## Contributing
 
