@@ -1,0 +1,4 @@
+services:
+    gelf_handler:
+        class: RenePardon\GelfSupport\GelfBundle\MonologHandler
+        arguments: ["@service_id", "plain_value", "%parameter%"]

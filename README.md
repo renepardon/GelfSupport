@@ -18,6 +18,8 @@ tests/      Contains PHPUnit tests
 vendor/     Contains dependencies
 ```
 
+We set the **gelf-php** facility so you can easily parse the INPUT of Graylog and pass it to your correct stream. 
+
 ## Install
 
 Via Composer
@@ -50,7 +52,36 @@ php artisan vendor:publish --provider="RenePardon\GelfSupport\GelfSupportService
 
 ### symfony
 
-TO BE DONE - WE HAVE TO REGISTER THE BUNDLE WITHIN AppKernel.php
+Add the following block to your **config.yml**:
+
+``` yaml
+gelf:
+    graylog:
+        enabled: true
+        host: localhost
+        port: 12201
+services:
+    gelf_support_handler:
+        class: RenePardon\GelfSupport\GelfBundle\MonologHandler
+        arguments: [@service_container]
+```
+
+config_prod.yml and config_dev.yml should contain this block:
+
+``` yaml
+monolog:
+    handlers:
+        gelf:
+            type: service
+            id: gelf_support_handler
+```
+
+Register the _GelfSupport_ bundle within **app/AppKernel.php** - add the next line to **$bundles** array:
+
+``` php
+new \RenePardon\GelfSupport\GelfBundle\GelfBundle(),
+```
+
 
 ## Change log
 
