@@ -7,6 +7,7 @@ use Gelf\Transport\UdpTransport;
 use Illuminate\Config\Repository;
 use Illuminate\Contracts\Debug\ExceptionHandler;
 use Illuminate\Support\ServiceProvider;
+use RenePardon\GelfSupport\Commands\TestLogging;
 
 /**
  * Class GelfSupportServiceProvider
@@ -15,6 +16,13 @@ use Illuminate\Support\ServiceProvider;
  */
 class GelfSupportServiceProvider extends ServiceProvider
 {
+    /**
+     * @var array
+     */
+    protected $commands = [
+        TestLogging::class,
+    ];
+
     /**
      * Perform post-registration booting of services.
      *
@@ -35,6 +43,8 @@ class GelfSupportServiceProvider extends ServiceProvider
     public function register()
     {
         $config = $this->app->make(Repository::class);
+
+        $this->commands($this->commands);
 
         $this->app->alias(ExceptionHandler::class, 'exceptions');
         $this->app->singleton('exceptions.repository', ExceptionHandlerRepository::class);
