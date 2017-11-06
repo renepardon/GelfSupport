@@ -29,7 +29,7 @@ class TestLogging extends Command
     /**
      * @throws Exception
      */
-    public function fire()
+    public function handle()
     {
         throw new Exception('Test logging exception');
     }
